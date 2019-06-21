@@ -23,6 +23,9 @@
         crossorigin="anonymous"></script>
     <!-- Font-Awesome -->
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- chosen css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 </head>
 
 <body>
@@ -30,13 +33,13 @@
     <div class="container">
 
         <h2>Survey Questions</h2>
-        <br>
+        <hr>
         <h3>About Your</h3>
         <h4>Name</h4>
         <input type="text" name="" id="name" class="form-control" required>
         <h4>Profile Image</h4>
         <input type="text"name="" id="profile-photo" class="form-control" required>
-        <br>
+        <hr>
         <h3>Question 1</h3>
         <h4>Put question here</h4>
         <select data-placeholder="" class="user-answer" id="question-one">
@@ -46,8 +49,13 @@
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5(Strongly Agree)</option>
-            
         </select>
+
+        <hr>
+
+        <button type="submit" class="btn btn-success" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit Responses</button>
+
+        <hr>
 
         <footer class="footer">
             <div class="container">
