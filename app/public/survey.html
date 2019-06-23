@@ -9,6 +9,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.4.0.js"
         integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -38,7 +39,7 @@
         <h4>Name</h4>
         <input type="text" name="" id="name" class="form-control" required>
         <h4>Profile Image</h4>
-        <input type="text"name="" id="profile-photo" class="form-control" required>
+        <input type="text" name="" id="profile-photo" class="form-control" required>
         <hr>
         <h3>Question 1</h3>
         <h4>Are you a hard worker?</h4>
@@ -164,18 +165,50 @@
 
         <hr>
 
-        <button type="submit" class="btn btn-success" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit Responses</button>
+        <button type="submit" class="btn btn-success" id="submit"><i class="fa fa-check-circle"
+                aria-hidden="true"></i>Submit Responses</button>
 
         <hr>
 
         <footer class="footer">
             <div class="container">
                 <p>
-                    <a href="#">API Friends List</a> | <a href="https://github.com/CB721/FriendFinder">GitHub Repo</a>
+                    <a href="./api/friends">API Friends List</a> | <a href="https://github.com/CB721/FriendFinder">GitHub Repo</a>
                 </p>
             </div>
         </footer>
     </div>
+
+    <!-- Get user responses -->
+    <script>
+        $("submit").on("click", function () {
+            // validate form
+            function validForm() {
+                //set to validity to true
+                var valid = true;
+
+                // go through each question on form
+                $(".form-control").each(function () {
+                    // check if there is a response to the question
+                    if ($(this).val() === "") {
+                        valid = false;
+                    }
+                });
+
+                $(".user-answer").each(function () {
+                    if ($(this).val() === "") {
+                        valid = false;
+                    }
+                });
+                return valid;
+            }
+            if (valid) {
+                console.log("validated");
+            } else {
+                console.log("missing field");
+            }
+        })
+    </script>
 
 </body>
 
