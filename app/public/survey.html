@@ -173,7 +173,8 @@
         <footer class="footer">
             <div class="container">
                 <p>
-                    <a href="./api/friends">API Friends List</a> | <a href="https://github.com/CB721/FriendFinder">GitHub Repo</a>
+                    <a href="./api/friends">API Friends List</a> | <a
+                        href="https://github.com/CB721/FriendFinder">GitHub Repo</a>
                 </p>
             </div>
         </footer>
@@ -187,25 +188,45 @@
                 //set to validity to true
                 var valid = true;
 
-                // go through each question on form
+                // make sure all aspects of form are completed
                 $(".form-control").each(function () {
-                    // check if there is a response to the question
+                    // if empty, change to false
                     if ($(this).val() === "") {
                         valid = false;
                     }
                 });
 
+                // check that each question has been answered
                 $(".user-answer").each(function () {
+                    // if empty, change to false
                     if ($(this).val() === "") {
                         valid = false;
                     }
                 });
                 return valid;
             }
-            if (valid) {
-                console.log("validated");
-            } else {
-                console.log("missing field");
+
+            // if form is valid
+            if (validForm) {
+                // user data
+                var data = {
+                    name: $("#name").val().trim(),
+                    photo: $("#profile-photo").val(),
+                    scores: [
+                        $("#question-one").val(),
+                        $("#question-two").val(),
+                        $("#question-three").val(),
+                        $("#question-four").val(),
+                        $("#question-five").val(),
+                        $("#question-six").val(),
+                        $("#question-seven").val(),
+                        $("#question-eight").val(),
+                        $("#question-nine").val(),
+                        $("#question-ten").val(),
+                        $("#question-eleven").val(),
+                        $("#question-twelve").val(),
+                    ]
+                }
             }
         })
     </script>
