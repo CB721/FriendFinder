@@ -18,10 +18,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
     <!-- Font-Awesome -->
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <!-- chosen css -->
@@ -35,7 +31,7 @@
 
         <h2>Survey Questions</h2>
         <hr>
-        <h3>About Your</h3>
+        <h3>About You</h3>
         <h4>Name</h4>
         <input type="text" name="" id="name" class="form-control" required>
         <h4>Profile Image</h4>
@@ -180,57 +176,68 @@
         </footer>
     </div>
 
-    <!-- Get user responses -->
-    <script>
-        $("submit").on("click", function () {
-            // validate form
-            function validForm() {
-                //set to validity to true
-                var valid = true;
-
-                // make sure all aspects of form are completed
-                $(".form-control").each(function () {
-                    // if empty, change to false
-                    if ($(this).val() === "") {
-                        valid = false;
-                    }
-                });
-
-                // check that each question has been answered
-                $(".user-answer").each(function () {
-                    // if empty, change to false
-                    if ($(this).val() === "") {
-                        valid = false;
-                    }
-                });
-                return valid;
-            }
-
-            // if form is valid
-            if (validForm) {
-                // user data
-                var data = {
-                    name: $("#name").val().trim(),
-                    photo: $("#profile-photo").val(),
-                    scores: [
-                        $("#question-one").val(),
-                        $("#question-two").val(),
-                        $("#question-three").val(),
-                        $("#question-four").val(),
-                        $("#question-five").val(),
-                        $("#question-six").val(),
-                        $("#question-seven").val(),
-                        $("#question-eight").val(),
-                        $("#question-nine").val(),
-                        $("#question-ten").val(),
-                        $("#question-eleven").val(),
-                        $("#question-twelve").val(),
-                    ]
-                }
-            }
-        })
-    </script>
-
 </body>
 
 </html>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Get user responses -->
+<script type="text/javascript">
+    $("#submit").on("click", function () {
+        event.preventDefault();
+        // validate form
+        function validForm() {
+            //set to validity to true
+            var valid = true;
+
+            // make sure all aspects of form are completed
+            $(".form-control").each(function () {
+                // if empty, change to false
+                if ($(this).val() === "") {
+                    valid = false;
+                }
+            });
+
+            // check that each question has been answered
+            $(".user-answer").each(function () {
+                // if empty, change to false
+                if ($(this).val() === "") {
+                    valid = false;
+                }
+            });
+            return valid;
+        }
+
+        // if form is valid
+        if (validForm()) {
+            // user data
+            var userData = {
+                name: $("#name").val().trim(),
+                photo: $("#profile-photo").val(),
+                scores: [
+                    $("#question-one").val(),
+                    $("#question-two").val(),
+                    $("#question-three").val(),
+                    $("#question-four").val(),
+                    $("#question-five").val(),
+                    $("#question-six").val(),
+                    $("#question-seven").val(),
+                    $("#question-eight").val(),
+                    $("#question-nine").val(),
+                    $("#question-ten").val(),
+                    $("#question-eleven").val(),
+                    $("#question-twelve").val()
+                ]
+            };
+
+            // get url of page for ajax post
+            var currentURL = window.location.origin;
+
+            // ajax post to api/friends
+            $.post("/api/friends", userData, function (data) {
+                
+            });
+        }
+    });
+</script>
