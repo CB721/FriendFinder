@@ -22,27 +22,24 @@
         crossorigin="anonymous"></script>
     <!-- Font-Awesome -->
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <!-- chosen css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 </head>
 
 <body>
 
     <div class="container">
-
+        <hr>
         <h2>Survey Questions</h2>
         <hr>
         <!-- user profile -->
         <h3>About You</h3>
-        <h4>Name</h4>
+        <h4>Name (Required)</h4>
         <input type="text" name="" id="name" class="form-control" required>
-        <h4>Profile Image</h4>
+        <h4>Link to Photo Image (Required)</h4>
         <input type="text" name="" id="profile-photo" class="form-control" required>
         <hr>
         <!-- questions -->
         <h3>Question 1</h3>
-        <h4>Are you a hard worker?</h4>
+        <h5>Are you a hard worker?</h5>
         <select data-placeholder="" class="user-answer" id="question-one">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -52,7 +49,7 @@
             <option value="5">5(Strongly Agree)</option>
         </select>
         <h3>Question 2</h3>
-        <h4>Would you do anything for a friend?</h4>
+        <h5>Would you do anything for a friend?</h5>
         <select data-placeholder="" class="user-answer" id="question-two">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -62,7 +59,7 @@
             <option value="5">5(Strongly Agree)</option>
         </select>
         <h3>Question 3</h3>
-        <h4>Are you good with computers?</h4>
+        <h5>Are you good with computers?</h5>
         <select data-placeholder="" class="user-answer" id="question-three">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -72,7 +69,7 @@
             <option value="5">5(Strongly Agree)</option>
         </select>
         <h3>Question 4</h3>
-        <h4>Do you consider yourself to be a people person?</h4>
+        <h5>Do you consider yourself to be a people person?</h5>
         <select data-placeholder="" class="user-answer" id="question-four">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -82,7 +79,7 @@
             <option value="5">5(Strongly Agree)</option>
         </select>
         <h3>Question 5</h3>
-        <h4>Do you check your schedule often?</h4>
+        <h5>Do you check your schedule often?</h5>
         <select data-placeholder="" class="user-answer" id="question-five">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -92,7 +89,7 @@
             <option value="5">5(Strongly Agree)</option>
         </select>
         <h3>Question 6</h3>
-        <h4>How valueable is your word?</h4>
+        <h5>How valueable is your word?</h5>
         <select data-placeholder="" class="user-answer" id="question-six">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -102,7 +99,7 @@
             <option value="5">5(Strongly Agree)</option>
         </select>
         <h3>Question 7</h3>
-        <h4>Is family important to you?</h4>
+        <h5>Is family important to you?</h5>
         <select data-placeholder="" class="user-answer" id="question-seven">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -112,7 +109,7 @@
             <option value="5">5(Strongly Agree)</option>
         </select>
         <h3>Question 8</h3>
-        <h4>Do you spend a lot of time relaxing?</h4>
+        <h5>Do you spend a lot of time relaxing?</h5>
         <select data-placeholder="" class="user-answer" id="question-eight">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -122,7 +119,7 @@
             <option value="5">5(Strongly Agree)</option>
         </select>
         <h3>Question 9</h3>
-        <h4>Is it important to think before speaking?</h4>
+        <h5>Is it important to think before speaking?</h5>
         <select data-placeholder="" class="user-answer" id="question-nine">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -132,7 +129,7 @@
             <option value="5">5(Strongly Agree)</option>
         </select>
         <h3>Question 10</h3>
-        <h4>Do you like a good meal?</h4>
+        <h5>Do you like a good meal?</h5>
         <select data-placeholder="" class="user-answer" id="question-ten">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -142,7 +139,7 @@
             <option value="5">5(Strongly Agree)</option>
         </select>
         <h3>Question 11</h3>
-        <h4>Do you like to travel?</h4>
+        <h5>Do you like to travel?</h5>
         <select data-placeholder="" class="user-answer" id="question-eleven">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -152,7 +149,7 @@
             <option value="5">5(Strongly Agree)</option>
         </select>
         <h3>Question 12</h3>
-        <h4>Have you ever been asked to leave a job?</h4>
+        <h5>Have you ever been asked to leave a job?</h5>
         <select data-placeholder="" class="user-answer" id="question-twelve">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -171,24 +168,23 @@
         <hr>
 
         <!-- section for results modal -->
-
-
         <div id="matchResults" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
             aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Your Match</h5>
+                        <h3 class="modal-title">Your Match</h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Results go here</p>
+                        <h5 id="matchName"></h5>
+                        <img id="matchPhoto" alt="your match">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button id="resetSurvey" type="button" class="btn btn-primary">Find a new match!</button>
                     </div>
                 </div>
             </div>
@@ -263,9 +259,14 @@
 
             // ajax post to api/friends
             $.post("/api/friends", userData, function (data) {
-                // modal with response
-                $('#matchResults').modal('toggle')
+                // get name and match
+                $("#matchName").text(data.name);
+                $("#matchPhoto").attr("src", data.photo);
+                // trigger modal with response
+                $('#matchResults').modal('toggle');
             });
         }
     });
+
+    // reset form on button click
 </script>
