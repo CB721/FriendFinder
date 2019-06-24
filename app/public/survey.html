@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Finder</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -170,6 +172,28 @@
 
         <!-- section for results modal -->
 
+
+        <div id="matchResults" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+            aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Your Match</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Results go here</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- footer -->
         <footer class="footer">
             <div class="container">
@@ -185,8 +209,6 @@
 
 </html>
 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery.js"></script>
 <!-- Get user responses -->
 <script type="text/javascript">
     $("#submit").on("click", function () {
@@ -241,7 +263,8 @@
 
             // ajax post to api/friends
             $.post("/api/friends", userData, function (data) {
-                
+                // modal with response
+                $('#matchResults').modal('toggle')
             });
         }
     });
