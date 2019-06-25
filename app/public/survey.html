@@ -258,13 +258,16 @@
             var currentURL = window.location.origin;
 
             // ajax post to api/friends
-            $.post("/api/friends", userData, function (data) {
+            $.post(currentURL + "/api/friends", userData, function (data) {
+                
                 // get name and match
                 $("#matchName").text(data.name);
                 $("#matchPhoto").attr("src", data.photo);
                 // trigger modal with response
                 $('#matchResults').modal('toggle');
             });
+        } else {
+            alert("Please complete the form");
         }
     });
 

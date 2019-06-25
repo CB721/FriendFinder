@@ -1,24 +1,6 @@
 // create user profiles objects
 var friends = [
     {
-        name: "Jack Bauer",
-        photo: "https://tvmedia.ign.com/tv/image/article/798/798840/24-season-6-20070622013020469.jpg",
-        scores: [
-            5,
-            5,
-            3,
-            1,
-            3,
-            5,
-            5,
-            1,
-            1,
-            1,
-            3,
-            5
-        ]
-    },
-    {
         name: "Kim Bauer",
         photo: "https://upload.wikimedia.org/wikipedia/en/8/8c/Kim_Bauer.jpg",
         scores: [
@@ -34,6 +16,24 @@ var friends = [
             3,
             2,
             4
+        ]
+    },
+    {
+        name: "Jack Bauer",
+        photo: "https://tvmedia.ign.com/tv/image/article/798/798840/24-season-6-20070622013020469.jpg",
+        scores: [
+            5,
+            5,
+            3,
+            1,
+            3,
+            5,
+            5,
+            1,
+            1,
+            1,
+            3,
+            5
         ]
     },
     {
