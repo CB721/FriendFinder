@@ -11,7 +11,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.4.0.js"
         integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -20,6 +20,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <!-- Chosen -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
 </head>
 
@@ -39,7 +42,7 @@
         <!-- questions -->
         <h3>Question 1</h3>
         <h5>Are you a hard worker?</h5>
-        <select class="user-answer" id="question-one">
+        <select class="chosen-container chosen-container-single user-answer" style="width: 150px" id="question-one">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -49,7 +52,7 @@
         </select>
         <h3>Question 2</h3>
         <h5>Would you do anything for a friend?</h5>
-        <select class="user-answer" id="question-two">
+        <select class="chosen-container chosen-container-single user-answer" style="width: 150px" id="question-two">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -59,7 +62,7 @@
         </select>
         <h3>Question 3</h3>
         <h5>Are you good with computers?</h5>
-        <select class="user-answer" id="question-three">
+        <select class="chosen-container chosen-container-single user-answer" style="width: 150px" id="question-three">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -69,7 +72,7 @@
         </select>
         <h3>Question 4</h3>
         <h5>Do you consider yourself to be a people person?</h5>
-        <select class="user-answer" id="question-four">
+        <select class="chosen-container chosen-container-single user-answer" style="width: 150px" id="question-four">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -79,7 +82,7 @@
         </select>
         <h3>Question 5</h3>
         <h5>Do you check your schedule often?</h5>
-        <select class="user-answer" id="question-five">
+        <select class="chosen-container chosen-container-single user-answer" style="width: 150px" id="question-five">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -89,7 +92,7 @@
         </select>
         <h3>Question 6</h3>
         <h5>How valueable is your word?</h5>
-        <select class="user-answer" id="question-six">
+        <select class="chosen-container chosen-container-single user-answer" style="width: 150px" id="question-six">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -99,7 +102,7 @@
         </select>
         <h3>Question 7</h3>
         <h5>Is family important to you?</h5>
-        <select class="user-answer" id="question-seven">
+        <select class="chosen-container chosen-container-single user-answer" style="width: 150px" id="question-seven">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -109,7 +112,7 @@
         </select>
         <h3>Question 8</h3>
         <h5>Do you spend a lot of time relaxing?</h5>
-        <select class="user-answer" id="question-eight">
+        <select class="chosen-container chosen-container-single user-answer" style="width: 150px" id="question-eight">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -119,7 +122,7 @@
         </select>
         <h3>Question 9</h3>
         <h5>Is it important to think before speaking?</h5>
-        <select class="user-answer" id="question-nine">
+        <select class="chosen-container chosen-container-single user-answer" style="width: 150px" id="question-nine">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -129,7 +132,7 @@
         </select>
         <h3>Question 10</h3>
         <h5>Do you like a good meal?</h5>
-        <select class="user-answer" id="question-ten">
+        <select class="chosen-container chosen-container-single user-answer" style="width: 150px" id="question-ten">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -139,7 +142,7 @@
         </select>
         <h3>Question 11</h3>
         <h5>Do you like to travel?</h5>
-        <select class="user-answer" id="question-eleven">
+        <select class="chosen-container chosen-container-single user-answer" style="width: 150px" id="question-eleven">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -149,7 +152,7 @@
         </select>
         <h3>Question 12</h3>
         <h5>Have you ever been asked to leave a job?</h5>
-        <select class="user-answer" id="question-twelve">
+        <select class="chosen-container chosen-container-single user-answer" style="width: 150px" id="question-twelve">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -162,7 +165,7 @@
         <hr>
         <!-- submit results -->
         <button type="submit" class="btn btn-success" id="submit"><i class="fa fa-check-circle"
-                aria-hidden="true"></i>Submit Responses</button>
+                aria-hidden="true"></i> Submit Responses</button>
 
         <hr>
 
