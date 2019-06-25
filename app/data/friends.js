@@ -19,24 +19,6 @@ var friends = [
         ]
     },
     {
-        name: "Jack Bauer",
-        photo: "https://tvmedia.ign.com/tv/image/article/798/798840/24-season-6-20070622013020469.jpg",
-        scores: [
-            5,
-            5,
-            3,
-            1,
-            3,
-            5,
-            5,
-            1,
-            1,
-            1,
-            3,
-            5
-        ]
-    },
-    {
         name: "Chloe O'Brian",
         photo: "https://upload.wikimedia.org/wikipedia/en/0/02/Chloe_O%27Brian.jpg",
         scores: [

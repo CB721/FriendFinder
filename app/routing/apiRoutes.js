@@ -13,7 +13,7 @@ module.exports = function (app) {
         var friendMatch = {
             name: "",
             photo: "",
-            score: 60
+            score: 130
         };
         
         // get results from surver
