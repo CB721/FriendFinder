@@ -23,26 +23,26 @@ module.exports = function (app) {
         var userScores = userData.scores;
 
         // difference between user scores and friends in db
-        var scoreDifference = 0;
+        var totalDifference = 0;
 
         // get all friends from server
         for (var i = 0; i < friends.length; i ++) {
             // set difference to 0
-            scoreDifference = 0;
+            totalDifference = 0;
 
             // go through scores for current friend in iteration
             for (var c = 0; c < friends[i].scores.length; c++) {
                 // calculate difference between scores and add to score difference
                 // can be the same iteration [c] because the answers should be for the same question
-                scoreDifference += Math.abs(parseInt(userScores[c]) - parseInt(friends[i].scores[c]));
+                totalDifference += Math.abs(parseInt(userScores[c]) - parseInt(friends[i].scores[c]));
 
                 // replace matched friend only if the difference between their scores is less than the previous match
-                if (scoreDifference <= friendMatch.score) {
+                if (totalDifference <= friendMatch.score) {
                     // reset matched friend to current friend in iteration
                     friendMatch.name = friends[i].name;
                     friendMatch.photo = friends[i].photo;
-                    friendMatch.score = scoreDifference;
-                    console.log("updated score: " + scoreDifference);
+                    friendMatch.score = totalDifference;
+                    console.log("updated score: " + totalDifference);
                 }
             }
         }
