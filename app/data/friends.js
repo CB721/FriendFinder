@@ -1,6 +1,24 @@
 // create user profiles objects
 var friends = [
     {
+        name: "Jack Bauer",
+        photo: "https://tvmedia.ign.com/tv/image/article/798/798840/24-season-6-20070622013020469.jpg",
+        scores: [
+            5,
+            5,
+            3,
+            1,
+            4,
+            5,
+            5,
+            1,
+            1,
+            1,
+            3,
+            5
+        ]
+    },
+    {
         name: "Kim Bauer",
         photo: "https://upload.wikimedia.org/wikipedia/en/8/8c/Kim_Bauer.jpg",
         scores: [
@@ -157,7 +175,7 @@ var friends = [
             5,
             1,
             3,
-            3,
+            2,
             3,
             1
         ]
@@ -185,15 +203,15 @@ var friends = [
         photo: "https://vignette.wikia.nocookie.net/24wikia/images/3/34/Mike_Novick.jpg/revision/latest/scale-to-width-down/250?cb=20060320031346",
         scores: [
             2,
-            2,
             1,
             1,
             2,
-            1,
-            1,
-            1,
             3,
+            1,
+            2,
             3,
+            5,
+            4,
             2,
             5
         ]
@@ -202,15 +220,15 @@ var friends = [
         name: "Edgar Stiles",
         photo: "https://vignette.wikia.nocookie.net/24wikia/images/c/ca/EdgarStiles.jpg/revision/latest/scale-to-width-down/290?cb=20060114180306",
         scores: [
-            2,
+            1,
             3,
+            3,
+            1,
+            1,
+            1,
             4,
-            1,
-            1,
-            1,
             5,
-            4,
-            1,
+            3,
             5,
             1,
             5

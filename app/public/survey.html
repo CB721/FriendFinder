@@ -275,6 +275,7 @@
     // reset form on button click
     $("#resetSurvey").on("click", function () {
         event.preventDefault();
+        location.reload(true);
         // clear answers
         $(".user-answer").val('');
         // clear name and photo link
